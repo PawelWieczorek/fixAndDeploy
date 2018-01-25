@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: PWieczorek
   Date: 2018-01-25
-  Time: 13:42
+  Time: 14:51
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -16,21 +16,7 @@
     </h1>
     <br>
     <br>
-    <form action="/" method="post">
-        Insert first name: <input type="text" name="firstName>
-        <br>
-        <br>
-        Insert last name:  <input type="text" name="lastName">
-        <br>
-        <br>
-        Insert e-mail:     <input type="text" name="mail">
-        <br>
-        <br>
-        <input type="submit" value="Submit">
-
-    </form>
-
-
-
+    <h3 style="color: darkblue; text-align: center">Password to next step: </h3>
+    <h2 style="color: darkblue; text-align: center">${password}</h2>
 </body>
 </html>

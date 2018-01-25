@@ -1,5 +1,7 @@
 package com.hackathon.fixAndDeploy;
 
+import java.util.Base64;
+
 public class Password {
 
     private String password;
@@ -17,12 +19,12 @@ public class Password {
     public String getPassword(String firstKey, String secondKey, String thirdKey) {
         String tempString = "";
 
-        String tempPassword = firstKey + secondKey + thirdKey;
+
+        String tempPassword = thirdKey + firstKey + secondKey;
 
         if(this.password.equals(tempPassword)) {
-            //TODO: change localhost to your server
-            tempString = "localhost:8080/candidates";
+            tempString = "MTkyLjE2OC4xLjc6ODA4MC9jYW5kaWRhdGVz";
         }
-        return tempString;
+        return new String(Base64.getDecoder().decode(tempString));
     }
 }
