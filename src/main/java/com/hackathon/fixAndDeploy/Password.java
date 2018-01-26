@@ -17,14 +17,15 @@ public class Password {
     }
 
     public String getPassword(String firstKey, String secondKey, String thirdKey) {
-        String tempString = "";
+        String tempString = "Try one more time!";
+        String encodedString = "MTkyLjE2OC4xLjc6ODA4MC9jYW5kaWRhdGVz";
 
 
         String tempPassword = thirdKey + firstKey + secondKey;
 
         if(this.password.equals(tempPassword)) {
-            tempString = "MTkyLjE2OC4xLjc6ODA4MC9jYW5kaWRhdGVz";
+            tempString = new String(Base64.getDecoder().decode(encodedString));
         }
-        return new String(Base64.getDecoder().decode(tempString));
+        return tempString;
     }
 }
